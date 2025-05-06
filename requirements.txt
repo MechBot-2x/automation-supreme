@@ -1,5 +1,49 @@
-numpy>=1.26.4
-scipy>=1.13.0
-pandas>=2.2.2
-pyyaml>=6.0.2
-python-dotenv>=1.0.1
+# ====================================================
+# MECHAUTOMATION QUANTUM DEPENDENCIES v5.4.2
+# Paquetes esenciales para el funcionamiento del núcleo
+# ====================================================
+
+# DEPENDENCIAS PRINCIPALES DEL SISTEMA
+numpy==1.26.4                  # Computación cuántica multidimensional
+scipy==1.13.0                  # Algoritmos de curvatura espacio-temporal
+pandas==2.2.2                  # Análisis de flujos dimensionales
+pyyaml==6.0.2                  # Configuración de realidades paralelas
+python-dotenv==1.0.1           # Manejo de variables de entorno interdimensionales
+
+# DEPENDENCIAS DE SEGURIDAD CUÁNTICA
+quantum-encrypt==3.7.1         # Cifrado post-cuántico AES-512
+reality-signer==2.4.0          # Firmas temporales irreversibles
+wormhole-protocol==5.2.1       # Comunicación interdimensional segura
+
+# MOTOR DE INFERENCIA NEURAL
+torch==2.2.1                   # Base para redes neuronales cuánticas
+tensorflow==2.15.0             # Procesamiento de flujos temporales
+quantum-transformers==1.8.3    # Modelos de atención multidimensional
+
+# INTERFACES DIMENSIONALES
+dimension-connector==4.5.0     # Conexión con realidades alternas
+temporal-api==3.2.1            # Manipulación de líneas temporales
+quantum-gateway==7.0.2         # Puente de comunicación intergaláctica
+
+# HERRAMIENTAS DE DIAGNÓSTICO
+reality-scanner==2.1.0         # Monitoreo de integridad dimensional
+entropy-analyzer==1.5.2        # Medición de fluctuaciones cuánticas
+anomaly-detector==3.0.1        # Identificación de distorsiones
+
+# DEPENDENCIAS OPCIONALES
+[dev]
+quantum-simulator==4.2.0       # Entorno de pruebas dimensionales
+reality-debugger==1.3.5        # Diagnóstico de anomalías
+test-dimensions==2.0.0         # Paquete de pruebas multiversales
+
+[docs]
+quantum-docs==5.1.0            # Generación de documentación holográfica
+temporal-formatter==1.2.1      # Organización de líneas temporales
+
+# RESTRICCIONES DE HARDWARE CUÁNTICO
+quantum-core>=3.0.0 ; platform_machine == "quantum_x64"
+reality-accelerator>=2.0.0 ; sys_platform == "linux" and python_version >= "3.10"
+
+# FIRMA DE INTEGRIDAD DIMENSIONAL
+# Checksum: 8f4e2a7d1c9b3e6f5a2d8c7b1e0f9d4
+# Validación Temporal: 2248-11-23T09:55:28Z
