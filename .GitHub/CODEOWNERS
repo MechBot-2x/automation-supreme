@@ -1,0 +1,44 @@
+# =============================================
+# MECHAUTOMATION CODE OWNERSHIP STRUCTURE v2.1
+# =============================================
+
+# REGLAS DE PROPIEDAD DEL CÓDIGO
+# * Jerarquía basada en dominios de conocimiento
+# * Responsabilidad de revisión y mantenimiento
+# * Escalado automático de privilegios
+
+# === NÚCLEO DEL SISTEMA ===
+/core/                    @mechmind-core-team @cyber-architects
+/core/quantum_engine.py   @dr-quantum @alice-ai
+/core/neural_networks/    @neuro-team @mechmind-ai-leads
+
+# === CONEXIONES DIMENSIONALES ===
+/wormholes/               @wormhole-engineers @api-masters
+/wormholes/api_fold.py    @space-bender @http-wizards
+/wormholes/db_singularity.py @blackhole-dba @cosmic-datastream
+
+# === CONFIGURACIÓN UNIVERSAL ===
+/config/                  @reality-admins @multiverse-ops
+/config/multiverse.yaml   @yaml-shamans @config-overlords
+/config/dark-matter.env   @security-council @vault-keepers
+
+# === OPERACIONES ESTELARES ===
+.github/workflows/        @ci-overlords @deploy-masters
+.github/workflows/starbuild.yml @build-commanders
+.github/workflows/deploy-nebula.yml @nebula-admirals
+
+# === SEGURIDAD CÓSMICA ===
+SECURITY.md               @security-council @cyber-defenders
+.github/ISSUE_TEMPLATE/   @incident-response
+.github/ISSUE_TEMPLATE/black-hole.md @crisis-team
+
+# === DOCUMENTACIÓN SAGRADA ===
+README.md                 @documentation-priests @knowledge-keepers
+
+# === REGLAS ESPECIALES ===
+# Requiere aprobación de 2+ propietarios
+/experimental/            @research-team @innovation-board
+*.pt                      @torch-masters @gpu-lords
+
+# === FALLBACK GLOBAL ===
+*                         @mechmind-global-ops @legacy-keepers
