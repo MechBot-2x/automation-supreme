@@ -1,49 +1,50 @@
-# =============================================
-# QUANTUM AUTOMATION DEPENDENCIES v2.0
-# Paquetes certificados para MechBot Templates V2
-# Rama Andromeda - Estable
-# =============================================
 
-# NÚCLEO CUÁNTICO
-quantum-core==5.4.2                # Motor principal de automatización
-temporal-engine==3.1.0             # Manipulación de líneas temporales
-reality-builder==2.7.1             # Constructor de realidades paralelas
+# ====================================================
+# MECHAUTOMATION QUANTUM DEPENDENCIES v5.4.2
+# Paquetes esenciales para el funcionamiento del núcleo
+# ====================================================
+
+# DEPENDENCIAS PRINCIPALES DEL SISTEMA
+numpy==1.26.4                  # Computación cuántica multidimensional
+scipy==1.13.0                  # Algoritmos de curvatura espacio-temporal
+pandas==2.2.2                  # Análisis de flujos dimensionales
+pyyaml==6.0.2                  # Configuración de realidades paralelas
+python-dotenv==1.0.1           # Manejo de variables de entorno interdimensionales
+
+# DEPENDENCIAS DE SEGURIDAD CUÁNTICA
+quantum-encrypt==3.7.1         # Cifrado post-cuántico AES-512
+reality-signer==2.4.0          # Firmas temporales irreversibles
+wormhole-protocol==5.2.1       # Comunicación interdimensional segura
+
+# MOTOR DE INFERENCIA NEURAL
+torch==2.2.1                   # Base para redes neuronales cuánticas
+tensorflow==2.15.0             # Procesamiento de flujos temporales
+quantum-transformers==1.8.3    # Modelos de atención multidimensional
 
 # INTERFACES DIMENSIONALES
-wormhole-connector==4.2.0          # Conexiones interdimensionales
-api-fold==1.9.3                    # Plegado espacio-temporal de APIs
-singularity-db==3.5.0              # Base de datos de agujeros negros
+dimension-connector==4.5.0     # Conexión con realidades alternas
+temporal-api==3.2.1            # Manipulación de líneas temporales
+quantum-gateway==7.0.2         # Puente de comunicación intergaláctica
 
-# INTELIGENCIA ARTIFICIAL GALÁCTICA
-cosmic-classifier==2.2.1           # Modelo de clasificación cósmica
-temporal-predictor==1.8.0          # Predicción de flujos temporales
-neural-flux==3.0.4                 # Redes neuronales multidimensionales
-
-# SEGURIDAD INTERESTELAR
-quantum-shield==7.2.0              # Protección contra intrusiones
-reality-lock==4.1.2                # Estabilizador de continuums
-dark-matter-encrypt==5.0.0         # Cifrado de materia oscura
-
-# HERRAMIENTAS DE CONFIGURACIÓN
-multiverse-config==1.6.0           # Parser de realidades paralelas
-cosmic-dotenv==2.1.0               # Gestor de variables dimensionales
-yaml-singularity==3.2.1            # Configuración de singularidades
-
-# MONITOREO Y REGISTRO
-event-horizon-logger==4.0.0        # Sistema de registro fronterizo
-supernova-alerts==2.5.0            # Detección de errores catastróficos
-quantum-telemetry==1.7.0           # Telemetría cuántica
+# HERRAMIENTAS DE DIAGNÓSTICO
+reality-scanner==2.1.0         # Monitoreo de integridad dimensional
+entropy-analyzer==1.5.2        # Medición de fluctuaciones cuánticas
+anomaly-detector==3.0.1        # Identificación de distorsiones
 
 # DEPENDENCIAS OPCIONALES
 [dev]
-reality-debugger==3.2.0            # Depuración dimensional
-quantum-test==2.0.0                # Pruebas multiversales
-cosmic-linter==1.5.0               # Análisis de código interestelar
+quantum-simulator==4.2.0       # Entorno de pruebas dimensionales
+reality-debugger==1.3.5        # Diagnóstico de anomalías
+test-dimensions==2.0.0         # Paquete de pruebas multiversales
 
 [docs]
-galactic-docs==4.1.0               # Documentación holográfica
-temporal-formatter==2.2.0          # Organización de líneas temporales
+quantum-docs==5.1.0            # Generación de documentación holográfica
+temporal-formatter==1.2.1      # Organización de líneas temporales
 
-# RESTRICCIONES CUÁNTICAS
-quantum-hardware>=1.0 ; sys_platform == "linux"
-temporal-accel>=2.0 ; python_version >= "3.10"
+# RESTRICCIONES DE HARDWARE CUÁNTICO
+quantum-core>=3.0.0 ; platform_machine == "quantum_x64"
+reality-accelerator>=2.0.0 ; sys_platform == "linux" and python_version >= "3.10"
+
+# FIRMA DE INTEGRIDAD DIMENSIONAL
+# Checksum: 8f4e2a7d1c9b3e6f5a2d8c7b1e0f9d4
+# Validación Temporal: 2248-11-23T09:55:28Z
