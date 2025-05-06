@@ -64,12 +64,3 @@ python core/quantum_engine.py --init --fuel=100%
 ```
 
 **✨ Tip:** Usa `python tools/singularity_generator.py` para crear nuevos universos de automatización!
-
----
-
-¿Quieres que desarrolle el contenido completo de algún archivo en específico? Por ejemplo:  
-1. El código del `quantum_engine.py`  
-2. La configuración avanzada de `multiverse.yaml`  
-3. Los workflows de construcción estelar  
-
-Dime qué elemento del cosmos quieres explorar primero 🚀
