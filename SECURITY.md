@@ -1,21 +1,30 @@
-# Security Policy
+# MECHAUTOMATION SECURITY POLICY v5.4
 
-## Supported Versions
+## VERSIONES COMPATIBLES CON SEGURIDAD
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+| Versión          | Estado       | Fin de Soporte | Notas                          |
+|------------------|-------------|----------------|-------------------------------|
+| 6.0.x           | ✅ Activo    | 2250-12-31     | Soporte completo               |
+| 5.4.x           | ✅ Activo    | 2249-12-31     | Soporte crítico solamente      |
+| 5.3.x           | ⚠️ Limitado | 2249-06-30     | Parches de emergencia          |
+| 5.2.x y anteriores | ❌ No soportado | -           | Vulnerabilidades no corregidas |
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+## PROTOCOLO DE REPORTE DE VULNERABILIDADES
 
-## Reporting a Vulnerability
+### Canal Seguro de Reporte
+```python
+# Ejemplo de reporte mediante Quantum Encryption
+from security_report import VulnerabilityReporter
 
-Use this section to tell people how to report a vulnerability.
+reporter = VulnerabilityReporter(
+    recipient="security@mechmind-dwv.quantum",
+    encryption="quantum_aes-512",
+    protocol="QSSP-v2"
+)
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+report = reporter.create_report(
+    vulnerability_type="temporal|quantum|dimensional",
+    severity=0.0-1.0,
+    proof_of_concept=True,
+    suggested_fix=None
+)
