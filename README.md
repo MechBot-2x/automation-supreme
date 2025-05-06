@@ -1,7 +1,3 @@
-Aquí tienes la estructura visionaria del `README.md` con la arquitectura de archivos completa para un proyecto de automatización potente:
-
----
-
 # **🚀 AUTOMATION SUPREME**  
 *Plantilla Galáctica para Sistemas Autónomos*  
 
