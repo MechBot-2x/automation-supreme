@@ -1,0 +1,146 @@
+# =============================================
+# MECHAUTOMATION MULTIVERSE CONFIG v3.1.4
+# Variables de configuración interdimensional
+# =============================================
+
+# Configuración base de dimensiones
+base_dimension: &base_dim
+  quantum_flux: 1.0
+  temporal_anchor: "2025-05-07T00:00:00Z"
+  entropy_level: 0.25
+  stability_threshold: 0.98
+
+# Dimensiones primarias
+dimensions:
+  - id: prime
+    <<: *base_dim
+    description: "Realidad principal de referencia"
+    quantum_link: true
+    temporal_rules:
+      causality: strict
+      paradox_resolution: auto_correct
+    resources:
+      cpu: "8q"
+      memory: "32qb"
+      storage: "1pb"
+
+  - id: alpha
+    <<: *base_dim
+    description: "Universo espejo de alta energía"
+    quantum_flux: 1.7
+    entropy_level: 0.42
+    temporal_rules:
+      causality: flexible
+      paradox_resolution: quarantine
+    features:
+      - quantum_entanglement
+      - temporal_folding
+    resources:
+      cpu: "12q"
+      memory: "64qb"
+      storage: "2pb"
+
+  - id: beta
+    <<: *base_dim
+    description: "Dimensión de desarrollo experimental"
+    stability_threshold: 0.85
+    temporal_rules:
+      causality: experimental
+      paradox_resolution: log_only
+    features:
+      - unstable_prototypes
+    resources:
+      cpu: "16q"
+      memory: "128qb"
+      storage: "5pb"
+
+# Reglas de conexión interdimensional
+interdimensional_rules:
+  max_connections: 12
+  default_ttl: "1h"
+  protocols:
+    - name: quantum_tunnel
+      bandwidth: "10gb/s"
+      latency: "12ms"
+      stability: 0.99
+    - name: wormhole
+      bandwidth: "100gb/s"
+      latency: "2ms"
+      stability: 0.85
+
+# Configuración de seguridad
+security:
+  quantum_encryption:
+    algorithm: "sha3-512"
+    key_rotation: "24h"
+  access_control:
+    - dimension: prime
+      roles: ["admin", "engineer"]
+    - dimension: alpha
+      roles: ["engineer", "scientist"]
+    - dimension: beta
+      roles: ["developer"]
+
+# Variables de entorno especiales
+environment:
+  shared:
+    LOG_LEVEL: "quantum.debug"
+    TEMPORAL_BUFFER: "500ms"
+  dimension_specific:
+    prime:
+      API_ENDPOINT: "https://api.prime.universe"
+    alpha:
+      API_ENDPOINT: "https://api.alpha.universe"
+    beta:
+      API_ENDPOINT: "https://api.beta.universe"
+
+# Rutas de almacenamiento interdimensional
+storage_paths:
+  data:
+    prime: "/multiverse/prime/data"
+    alpha: "/multiverse/alpha/data"
+    beta: "/multiverse/beta/data"
+  logs:
+    prime: "/multiverse/prime/logs"
+    alpha: "/multiverse/alpha/logs"
+    beta: "/multiverse/beta/logs"
+  backups: "/multiverse/backups"
+
+# Configuración de sincronización temporal
+temporal_sync:
+  master: "prime"
+  sync_interval: "5m"
+  drift_correction:
+    enabled: true
+    threshold: "100ms"
+    method: "gradual_adjustment"
+
+# Protocolos de emergencia
+emergency_protocols:
+  reality_collapse:
+    trigger: "stability < 0.5"
+    actions:
+      - isolate_dimension
+      - activate_backup
+    parameters:
+      isolation_level: "full"
+      backup_dimension: "alpha"
+  
+  quantum_overflow:
+    trigger: "entropy > 0.9"
+    actions:
+      - discharge_energy
+      - notify_engineers
+    parameters:
+      discharge_rate: "50%"
+      notification_level: "critical"
+
+# Dependencias interdimensionales
+dependencies:
+  shared_services:
+    - name: "quantum_database"
+      dimensions: ["prime", "alpha"]
+      min_version: "4.2"
+    - name: "temporal_engine"
+      dimensions: ["prime", "beta"]
+      min_version: "3.7"
