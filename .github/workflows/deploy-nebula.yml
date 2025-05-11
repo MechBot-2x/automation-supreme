@@ -75,9 +75,18 @@ jobs:
       matrix:
         shard_id: [1, 2, 3, 4, 5]
         exclude:
-          - shard_id: ${{ fromJson(needs.quantum_cluster_init.outputs.reality_shards) > matrix.shard_id }}
-      max-parallel: ${{ env.MAX_REALITY_SHARDS }}
-
+         desplegar_fragmentos :
+  nombre : " Despliegue en Fragmento ${{ matrix.id_de_fragmento }} "
+  necesidades : quantum_cluster_init
+  se ejecuta : ejecutor de nebulosa
+  entorno :
+    MAX_REALITY_SHARDS: 5
+  estrategia :
+    matriz :
+      id_de_fragmento : [1, 2, 3, 4, 5]
+      excluir :
+        - id_de_fragmento : ${{ fromJson(needs.quantum_cluster_init.outputs.reality_shards) }}
+    máximo paralelo : ${{ env.MAX_REALITY_SHARDS }}
     steps:
       - name: "Descargar Artefactos Cuánticos"
         uses: actions/download-artifact@v3
