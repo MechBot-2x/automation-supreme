@@ -1,12 +1,3 @@
-# =============================================
-# MECHAUTOMATION CODE OWNERSHIP STRUCTURE v2.1
-# =============================================
-
-# REGLAS DE PROPIEDAD DEL CÓDIGO
-# * Jerarquía basada en dominios de conocimiento
-# * Responsabilidad de revisión y mantenimiento
-# * Escalado automático de privilegios
-
 # === NÚCLEO DEL SISTEMA ===
 /core/                    @mechmind-core-team @cyber-architects
 /core/quantum_engine.py   @dr-quantum @alice-ai
