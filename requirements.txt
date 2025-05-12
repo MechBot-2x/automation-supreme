@@ -1,9 +1,3 @@
-
-# ====================================================
-# MECHAUTOMATION QUANTUM DEPENDENCIES v5.4.2
-# Paquetes esenciales para el funcionamiento del núcleo
-# ====================================================
-
 # DEPENDENCIAS PRINCIPALES DEL SISTEMA
 numpy==1.26.4                  # Computación cuántica multidimensional
 scipy==1.13.0                  # Algoritmos de curvatura espacio-temporal
@@ -17,7 +11,7 @@ reality-signer==2.4.0          # Firmas temporales irreversibles
 wormhole-protocol==5.2.1       # Comunicación interdimensional segura
 
 # MOTOR DE INFERENCIA NEURAL
-torch==2.2.1                   # Base para redes neuronales cuánticas
+torch==2.6.0                   # Base para redes neuronales cuánticas
 tensorflow==2.15.0             # Procesamiento de flujos temporales
 quantum-transformers==1.8.3    # Modelos de atención multidimensional
 
