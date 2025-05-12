@@ -1,5 +1,3 @@
-# .github/workflows/main.yml - Flujo de Trabajo Cuántico Principal
-
 name: "Cosmic Automation Pipeline"
 
 on:
@@ -141,7 +139,7 @@ jobs:
         with:
           pattern: quantum-core-*
           merge-multiple: true
-
+          
       - name: "Validación Cuántica"
         run: |
           python tools/quantum_validator.py \
