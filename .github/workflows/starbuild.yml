@@ -1,8 +1,3 @@
-# =============================================
-# MECHAUTOMATION STARBUILD CONFIGURATION v3.2
-# Construcción CI/CD para Sistemas Autónomos
-# =============================================
-
 name: "Starbuild Matrix Workflow"
 
 on:
