@@ -1,6 +1,3 @@
-
----
-
 ## 4. TIME-PARADOX.md (Inconsistencias Temporales)
 ```markdown
 ---
