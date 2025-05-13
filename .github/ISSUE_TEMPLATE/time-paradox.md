@@ -1,3 +1,5 @@
+---
+
 ## 4. TIME-PARADOX.md (Inconsistencias Temporales)
 ```markdown
 ---
@@ -33,5 +35,8 @@ assignees: "time-masters"
 **Contramedidas Propuestas**
 1. 
 2. 
-3.
+3. 
+
 ```
+
+---
