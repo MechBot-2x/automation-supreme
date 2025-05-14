@@ -1,6 +1,3 @@
-# =================================
-# CONFIGURACIÓN AVANZADA DEL HIPERESPACIO
-# =================================
 quantum_config:
   entanglement_matrix:
     - dimension: prime
