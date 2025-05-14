@@ -13,4 +13,9 @@ assignees: "wormhole-engineers"
 
 **📡 Métricas de Conexión**
 ```quantum
-[Pegar aquí el output de wormhole --diagnose --full]
+| Archivo de Configuración       | Propósito                          |  
+|--------------------------------|-----------------------------------|  
+| `config/multiverse.yaml`       | Regula realidades paralelas       |  
+| `.github/starbuild.yml`        | Construcción de constelaciones    |  
+| `core/neural_networks/*.pt`    | Inteligencias artificiales        |
+'''
