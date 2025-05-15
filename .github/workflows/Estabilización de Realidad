@@ -1,0 +1,32 @@
+  # ========================
+  # FASE 1: VERIFICACIÓN DEL CONTINUO
+  # ========================
+  verificación de realidad :
+    nombre : " Estabilización de Realidad "
+    se ejecuta en : quantum-ubuntu-24.04
+    Salidas :
+      dimensiones_estables : ${{ pasos.dimension-scanner.outputs.dimensions }}
+      estado_espacio_temporal : ${{ pasos.sonda-de-realidad.salidas.estabilidad }}
+    
+    pasos :
+      - nombre : " Iniciar Bloqueo Cuántico "
+        usos : mechmind-actions/quantum-lock@v4
+        con :
+          umbral de entropía : 0,95
+          deriva temporal : 50 ms
+
+      - nombre : " Escaneo Dimensional "
+        id : escáner de dimensiones
+        usos : mechmind-actions/dimensional-scanner@v2.3
+        con :
+          profundidad de escaneo : completa
+          formato del informe : json
+
+      - nombre : " Análisis de Estabilidad "
+        id : sonda de realidad
+        correr : |
+          echo "Iniciando sondeo de realidad..."
+          ESTABILIDAD=$(herramientas python/reality_analyzer.py \
+            --input ${{ pasos.dimension-scanner.salidas.dimensiones }} \
+            --modo completo)
+          echo "::set-output nombre=estabilidad::$ESTABILIDAD"
