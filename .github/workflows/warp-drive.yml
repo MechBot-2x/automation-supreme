@@ -1,7 +1,11 @@
 name: "Warp Drive Cosmic Autoscaling"
 description: "Sistema de gestión de recursos para tráfico intergaláctico"
 
-on:
+on: dynamic_optimization:
+    name: "Afinamiento Cuántico"
+    needs: reality_adjustment
+    runs-on: quantum-optimizer-node
+    timeout-minutes: 15
   # Eventos de activación del hiperimpulsor
   schedule:
     - cron: '*/5 * * * *'  # Escaneo de realidad cada 5 minutos
