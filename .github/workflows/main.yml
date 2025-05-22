@@ -1,7 +1,11 @@
 name: "Cosmic Automation Pipeline"
 
-on:
-  # Activadores Multi-Dimensionales
+on:emergency_protocol:
+    name: "Respuesta a Anomalías"
+    if: ${{ failure() }}
+    needs: [reality_check, quantum_build]
+    runs-on: omega-platform
+    environment: crisis-response
   push:
     branches: [ "andromeda", "milky-way" ]
     tags: [ "v*.*.*" ]
@@ -122,6 +126,12 @@ jobs:
             core/dist/*.qwhl
             wormholes/interdimensional.map
             logs/quantum_build.log
+            steps:
+      - name: "Activar Escudos Cuánticos"
+        uses: mechmind-actions/quantum-shields@v3
+        with:
+          protection-level: maximum
+          auto-isolate: true
 
   # ========================
   # FASE 3: DESPLIEGUE INTERGALÁCTICO
@@ -161,7 +171,14 @@ jobs:
         with:
           status: ${{ job.status }}
           channel: '#cosmic-deployments'
-          message: 'Despliegue completado en ${{ env.PRIMARY_DIMENSION }}'
+          message: 'Despliegue completado en ${{ env.PRIMARY_DIMENSION }}
+          - name: "Registrar en el Libro de Realidad"
+        run: |
+          python logs/reality_logger.py \
+            --event deployment_failure \
+            --run-id ${{ github.run_id }} \
+            --artifacts-path ./ \
+            --error-level cosmic
 
   # ========================
   # FASE 4: PROTOCOLO DE CONTENCIÓN
