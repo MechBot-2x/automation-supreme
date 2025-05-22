@@ -1,5 +1,4 @@
- # FASE 2: DISTRIBUCIÓN MULTIDIMENSIONAL
-  deploy_shards:
+deploy_shards:
     name: "Despliegue en Fragmento ${{ matrix.shard_id }}"
     needs: quantum_cluster_init
     runs-on: nebula-executor
