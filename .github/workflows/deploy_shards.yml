@@ -1,0 +1,75 @@
+ # FASE 2: DISTRIBUCIÓN MULTIDIMENSIONAL
+  deploy_shards:
+    name: "Despliegue en Fragmento ${{ matrix.shard_id }}"
+    needs: quantum_cluster_init
+    runs-on: nebula-executor
+    strategy:
+      matrix:
+        shard_id: [1, 2, 3, 4, 5]
+        exclude:
+         desplegar_fragmentos :
+  nombre : " Despliegue en Fragmento ${{ matrix.id_de_fragmento }} "
+  necesidades : quantum_cluster_init
+  se ejecuta : ejecutor de nebulosa
+  entorno :
+    MAX_REALITY_SHARDS: 5
+  estrategia :
+    matriz :
+      id_de_fragmento : [1, 2, 3, 4, 5]
+      excluir :
+        - id_de_fragmento : ${{ fromJson(needs.quantum_cluster_init.outputs.reality_shards) }}
+    máximo paralelo : ${{ env.MAX_REALITY_SHARDS }}
+    steps:
+      - name: "Descargar Artefactos Cuánticos"
+        uses: actions/download-artifact@v3
+        with:
+          name: quantum-core-*-${{ matrix.shard_id }}.nebula
+          path: /artifacts
+
+      - name: "Descomprimir Paquete Dimensional"
+        run: |
+          quantum-extract --input /artifacts/core_${{ matrix.shard_id }}.qtx \
+            --output /deploy \
+            --shard ${{ matrix.shard_id }}
+
+      - name: "Verificación de Integridad"
+        run: |
+          nebula verify-integrity \
+            --manifest /deploy/manifest.qmf \
+            --cluster ${{ needs.quantum_cluster_init.outputs.cluster_id }}
+
+      - name: "Inyección de Dependencias"
+        uses: mechmind-actions/quantum-inject@v1
+        with:
+          dependency-matrix: "nebuladb://deps_${{ matrix.shard_id }}"
+          target: "/deploy"
+
+      - name: "Ejecutar Migraciones Cuánticas"
+        run: |
+          python nebula/migrate.py \
+            --shard=${{ matrix.shard_id }} \
+            --phase=pre-deploy \
+            --quantum-lock=true
+
+      - name: "Despliegue en Fragmento"
+        uses: mechmind-actions/nebula-deploy@v4
+        with:
+          cluster: ${{ needs.quantum_cluster_init.outputs.cluster_id }}
+          shard: ${{ matrix.shard_id }}
+          artifact-path: /deploy
+          reality-check: strict
+        env:
+          NEBULA_DEPLOY_TOKEN: ${{ secrets.NEBULA_DEPLOY_TOKEN }}
+
+      - name: "Post-Despliegue Cuántico"
+        run: |
+          python nebula/post_deploy.py \
+            --shard ${{ matrix.shard_id }} \
+            --entropy-adjustment auto \
+            --temporal-anchoring truesteps:
+      - name: "Iniciar Sincronizador Cuántico"
+        uses: mechmind-actions/reality-sync@v2
+        with:
+          primary-cluster: ${{ needs.quantum_cluster_init.outputs.cluster_id }}
+          sync-mode: full-spectrum
+          temporal-tolerance: 0.7
