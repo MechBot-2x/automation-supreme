@@ -1,6 +1,7 @@
 name: "Cosmic Automation Pipeline"
 
-on:emergency_protocol:
+on:
+emergency_protocol:
     name: "Respuesta a Anomalías"
     if: ${{ failure() }}
     needs: [reality_check, quantum_build]
