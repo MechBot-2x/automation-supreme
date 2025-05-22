@@ -1,6 +1,4 @@
-  # =================================
   # FASE 3: SINCRONIZACIÓN INTERDIMENSIONAL
-  # =================================
   reality_sync:
     name: "Sincronización de Realidades"
     needs: deploy_shards
