@@ -1,6 +1,4 @@
-  # ========================
-  # FASE 1: VERIFICACIÓN DEL CONTINUO
-  # ========================
+# FASE 1: VERIFICACIÓN DEL CONTINUO
   verificación de realidad :
     nombre : " Estabilización de Realidad "
     se ejecuta en : quantum-ubuntu-24.04
