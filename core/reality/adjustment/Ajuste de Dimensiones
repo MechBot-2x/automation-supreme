@@ -1,0 +1,37 @@
+  # ====================
+  # FASE 2: AJUSTE DE REALIDAD
+  # ====================
+  reality_adjustment:
+    name: "Ajuste de Dimensiones"
+    needs: quantum_monitoring
+    runs-on: reality-control-plane
+    environment: warp-core-production
+    
+    steps:
+      - name: "Verificar Estado Actual"
+        uses: mechmind-actions/dimension-check@v1.8
+        with:
+          expected_dimensions: ${{ needs.quantum_monitoring.outputs.recommended_dimensions }}
+        
+      - name: "Aplicar Configuración WARP"
+        if: ${{ needs.quantum_monitoring.outputs.reality_status == 'stable' }}
+        uses: mechmind-actions/warp-adjust@v4.1
+        with:
+          target_dimensions: ${{ needs.quantum_monitoring.outputs.recommended_dimensions }}
+          energy_profile: ${{ needs.quantum_monitoring.outputs.energy_requirements }}
+          stability_check: true
+        env:
+          WARP_CONTROL_KEY: ${{ secrets.WARP_CONTROL_KEY }}
+        
+      - name: "Estabilizar Subespacio"
+        uses: mechmind-actions/subspace-stabilizer@v2.0
+        with:
+          intensity: "auto"
+          damping_factor: 0.7
+        
+      - name: "Sincronizar Agujeros de Gusano"
+        run: |
+          python wormholes/sync.py \
+            --dimensions ${{ needs.quantum_monitoring.outputs.recommended_dimensions }} \
+            --energy ${{ needs.quantum_monitoring.outputs.energy_requirements }} \
+            --mode auto
