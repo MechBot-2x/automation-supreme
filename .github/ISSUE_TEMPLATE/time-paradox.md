@@ -1,4 +1,5 @@
 ## 4. TIME-PARADOX.md (Inconsistencias Temporales)
+---
 name: "⏳ Reporte de Paradoja Temporal"
 description: "Eventos que violan la causalidad lineal"
 title: "[PARADOX] [TIMELINE-X] Breve descripción"
