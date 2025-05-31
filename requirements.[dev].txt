@@ -1,6 +1,4 @@
-
 # DEPENDENCIAS OPCIONALES
-[dev]
 reality-debugger==3.2.0            # Depuración dimensional
 quantum-test==2.0.0                # Pruebas multiversales
 cosmic-linter==1.5.0               # Análisis de código interestelar
