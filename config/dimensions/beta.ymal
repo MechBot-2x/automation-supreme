@@ -1,0 +1,13 @@
+- id: beta
+    <<: *base_dim
+    description: "Dimensión de desarrollo experimental"
+    stability_threshold: 0.85
+    temporal_rules:
+      causality: experimental
+      paradox_resolution: log_only
+    features:
+      - unstable_prototypes
+    resources:
+      cpu: "16q"
+      memory: "128qb"
+      storage: "5pb"
