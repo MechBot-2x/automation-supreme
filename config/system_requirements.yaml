@@ -1,0 +1,10 @@
+# config/system_requirements.yaml
+components:
+  Qubits:
+    Prime: 8
+    Alpha: 12
+    Beta: 16
+  Quantum_Memory:
+    Prime: "32QB"
+    Alpha: "64QB"
+    Beta: "128QB"
