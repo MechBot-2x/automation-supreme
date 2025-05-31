@@ -1,3 +1,2 @@
-[docs]
 galactic-docs==4.1.0               # Documentación holográfica
 temporal-formatter==2.2.0          # Organización de líneas temporales
