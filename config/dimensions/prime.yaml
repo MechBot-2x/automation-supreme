@@ -11,33 +11,3 @@ dimensions:
       cpu: "8q"
       memory: "32qb"
       storage: "1pb"
-
-  - id: alpha
-    <<: *base_dim
-    description: "Universo espejo de alta energía"
-    quantum_flux: 1.7
-    entropy_level: 0.42
-    temporal_rules:
-      causality: flexible
-      paradox_resolution: quarantine
-    features:
-      - quantum_entanglement
-      - temporal_folding
-    resources:
-      cpu: "12q"
-      memory: "64qb"
-      storage: "2pb"
-
-  - id: beta
-    <<: *base_dim
-    description: "Dimensión de desarrollo experimental"
-    stability_threshold: 0.85
-    temporal_rules:
-      causality: experimental
-      paradox_resolution: log_only
-    features:
-      - unstable_prototypes
-    resources:
-      cpu: "16q"
-      memory: "128qb"
-      storage: "5pb"
