@@ -1,0 +1,68 @@
+  # ========================
+  # FASE 2: CONSTRUCCIÓN MULTIVERSAL
+  # ========================
+  quantum_build:
+    name: "Build D-${{ matrix.dimension }} | Py ${{ matrix.python }}"
+    needs: reality_check
+    runs-on: ${{ matrix.platform }}
+    strategy:
+      fail-fast: false
+      matrix:
+        dimension: ${{ fromJson(needs.reality_check.outputs.stable_dimensions) }}
+        python: [ "3.10", "3.11", "3.12" ]
+        platform: [ "quantum-ubuntu", "neutron-macos" ]
+        exclude:
+          - dimension: "theta-9"
+            platform: "neutron-macos"
+        include:
+          - dimension: "prime-7"
+            python: "3.12"
+            platform: "quantum-ubuntu"
+            experimental: false
+
+    steps:
+      - name: "Teletransporte de Código"
+        uses: actions/checkout@v4
+        with:
+          quantum-entanglement: true
+          fetch-depth: 0
+
+      - name: "Configurar Python ${{ matrix.python }}"
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python }}
+          architecture: x64
+
+      - name: "Instalar Dependencias Cuánticas"
+        run: |
+          pip install -r requirements.txt
+          pip install quantum-build-tools==3.4.0
+          python -m pip install --upgrade pip
+      - name: "Compilación del Núcleo"
+        env:
+          QUANTUM_ENERGY: ${{ github.event.inputs.quantum_energy }}
+        run: |
+          python core/quantum_compiler.py \
+            --dimension ${{ matrix.dimension }} \
+            --energy $QUANTUM_ENERGY \
+            --platform ${{ matrix.platform }}
+      - name: "Pruebas de Distorsión"
+        uses: mechmind-actions/reality-tests@v2
+        with:
+          dimension: ${{ matrix.dimension }}
+          test-level: extreme
+
+      - name: "Subir Artefactos Cuánticos"
+        uses: actions/upload-artifact@v3
+        with:
+          name: quantum-core-${{ matrix.dimension }}-${{ matrix.python }}
+          path: |
+            core/dist/*.qwhl
+            wormholes/interdimensional.map
+            logs/quantum_build.log
+            steps:
+      - name: "Activar Escudos Cuánticos"
+        uses: mechmind-actions/quantum-shields@v3
+        with:
+          protection-level: maximum
+          auto-isolate: true
