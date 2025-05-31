@@ -1,4 +1,3 @@
----
 name: "✨ Solicitud de Capacidad"
 description: "Nueva funcionalidad para el sistema"
 title: "[FEATURE] [AREA-X] Breve descripción"
