@@ -1,4 +1,3 @@
----
 name: "🌀 Anomalía en Agujero de Gusano"
 description: "Problemas en conexiones interdimensionales"
 title: "[WORMHOLE] [GATE-X] Breve descripción"  
