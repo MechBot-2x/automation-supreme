@@ -1,0 +1,13 @@
+Reglas de conexión interdimensional
+interdimensional_rules:
+  max_connections: 12
+  default_ttl: "1h"
+  protocols:
+    - name: quantum_tunnel
+      bandwidth: "10gb/s"
+      latency: "12ms"
+      stability: 0.99
+    - name: wormhole
+      bandwidth: "100gb/s"
+      latency: "2ms"
+      stability: 0.85
