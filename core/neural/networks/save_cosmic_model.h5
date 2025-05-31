@@ -1,0 +1,38 @@
+# Protocolo de Serialización Cósmica
+def save_cosmic_model(model, path):
+    """Guarda modelo en formato .h5 con metadatos extendidos"""
+    model.model.save(path, save_format='h5')
+    
+    # Metadata adicional
+    metadata = {
+        'input_shape': model.input_shape,
+        'num_classes': model.num_classes,
+        'quantum_bits': model.quantum_bits,
+        'version': '4.7.2'
+    }
+    
+    with h5py.File(path, 'a') as h5file:
+        h5file.attrs.update(metadata)
+
+def load_cosmic_model(path):
+    """Carga modelo con metadatos cósmicos"""
+    model = tf.keras.models.load_model(
+        path,
+        custom_objects={
+            'QuantumLayer': QuantumLayer,
+            '_cosmic_accuracy': CosmicClassifier._cosmic_accuracy,
+            '_quantum_confidence': CosmicClassifier._quantum_confidence
+        }
+    )
+    
+    with h5py.File(path, 'r') as h5file:
+        metadata = dict(h5file.attrs)
+    
+    classifier = CosmicClassifier(
+        input_shape=metadata['input_shape'],
+        num_classes=metadata['num_classes'],
+        quantum_bits=metadata['quantum_bits']
+    )
+    
+    classifier.model = model
+    return classifier
