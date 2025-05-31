@@ -1,0 +1,40 @@
+## Esquema de Autoescalado Inteligente
+
+```mermaid
+graph TD
+    A[Monitor Continuum] --> B{¿Estable?}
+    B -->|Sí| C[Análisis Carga]
+    B -->|No| D[Protocolo Emergencia]
+    C --> E{¿Necesita Ajuste?}
+    E -->|Sí| F[Calcular Nueva Config]
+    E -->|No| G[Esperar]
+    F --> H[Aplicar Ajustes]
+    H --> I[Optimizar]
+    I --> J[Estabilizar]
+    J --> K[Monitor Continuo]
+```
+
+## Perfiles de Energía Predefinidos
+
+```yaml
+energy_profiles:
+  eco:
+    base_cores: 2
+    scaling_factor: 1.2
+    max_dimensions: 4
+    power_curve: "linear"
+  
+  balanced:
+    base_cores: 4
+    scaling_factor: 1.5
+    max_dimensions: 8
+    power_curve: "exponential"
+  
+  performance:
+    base_cores: 8
+    scaling_factor: 2.0
+    max_dimensions: 12
+    power_curve: "quantum"
+    requires:
+      - "cooling_system"
+      - "temporal_buffer"
