@@ -1,0 +1,13 @@
+# config/security/access_rules.yaml
+access_control:
+  Prime:
+    access: "Completo"
+    permissions: ["ALL"]
+  Alpha:
+    access: "Científico"
+    permissions: ["READ", "EXECUTE", "ANALYZE"]
+  Beta:
+    access: "Restringido"
+    permissions: ["READ"]
+  default:
+    access: "Denegado"
