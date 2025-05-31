@@ -1,4 +1,10 @@
 # FASE 3: SINCRONIZACIÓN INTERDIMENSIONAL
+name: Reality Sync
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
   reality_sync:
     name: "Sincronización de Realidades"
     needs: deploy_shards
