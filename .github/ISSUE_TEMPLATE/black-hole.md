@@ -1,4 +1,3 @@
----
 name: "🕳️ Reporte de Singularidad"
 description: "Colapso dimensional o pérdida de realidad"
 title: "[BLACK HOLE] [SECTOR-X] Breve descripción"
