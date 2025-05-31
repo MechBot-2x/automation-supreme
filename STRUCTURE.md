@@ -1,6 +1,3 @@
-# **🚀 AUTOMATION SUPREME**  
-*Plantilla Galáctica para Sistemas Autónomos*  
-
 🌌 **Estructura Cósmica**  
 ▸ 📁 `.github/`  
    ┣ 📄 `CODEOWNERS` *(Dueños del conocimiento)*  
