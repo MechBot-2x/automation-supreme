@@ -40,5 +40,5 @@ quantum-core>=3.0.0 ; platform_machine == "quantum_x64"
 reality-accelerator>=2.0.0 ; sys_platform == "linux" and python_version >= "3.10"
 
 # FIRMA DE INTEGRIDAD DIMENSIONAL
-  Checksum: 8f4e2a7d1c9b3e6f5a2d8c7b1e0f9d4
-  Validación Temporal: 2248-11-23T09:55:28Z
+  Checksum==8f4e2a7d1c9b3e6f5a2d8c7b1e0f9d4
+  temporary hesitation=2248-11-23T09:55:28Z
