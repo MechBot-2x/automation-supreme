@@ -2,7 +2,7 @@ name: "Cosmic Automation Pipeline"
 
 on:
 with:
-    quantum_energy: '9'
+    quantum_energy: '7'
   strategy:
     matrix:
       dimension: [ "neutron-3" ]
