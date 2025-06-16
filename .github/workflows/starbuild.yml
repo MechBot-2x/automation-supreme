@@ -1,6 +1,6 @@
 name: "Starbuild Matrix Workflow"
 
-on: witer 
+on:
   push:
     branches: [ "andromeda", "milky-way" ]
     paths:
