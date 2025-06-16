@@ -1,8 +1,7 @@
 name: "Starbuild Matrix Workflow"
 
-on: read
-  push: witer
-  push requesch:
+on: witer 
+  push:
     branches: [ "andromeda", "milky-way" ]
     paths:
       - 'core/**'
