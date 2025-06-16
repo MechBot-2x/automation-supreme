@@ -1,8 +1,8 @@
 name: "Starbuild Matrix Workflow"
 
-on:
-  # Activadores multidimensionales
-  push:
+on: read
+  push: witer
+  push requesch:
     branches: [ "andromeda", "milky-way" ]
     paths:
       - 'core/**'
