@@ -1,0 +1,14 @@
+name: "Enforce Code Ownership"
+on: [pull_request]
+
+jobs:
+  verify-owners:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate CODEOWNERS
+        uses: github/CODEOWNERS-validation@v1
+        with:
+          required_approvals: 2
+          high_risk_paths: "/core/,/config/dark-matter.env"
+          high_risk_approvals: 3
