@@ -1,6 +1,3 @@
-# EVENT_HORIZON.LOG - Registro de Frontera del Sistema
-
-```log
 # ====================================================
 # MECHAUTOMATION EVENT HORIZON LOG v5.4.2
 # Registro de actividad en el límite del sistema
@@ -67,4 +64,3 @@
 [2248-11-23T09:55:22.120Z] WORMHOLE_CLOSE ALL ACTION "Cerrando todas las conexiones dimensionales"
 [2248-11-23T09:55:25.447Z] CORE_SAFE DIM-7 OK "Núcleo cuántico asegurado - Estado: estable"
 [2248-11-23T09:55:28.001Z] SYSTEM_OFF DIM-7 OK "Apagado completado - Tiempo activo: 13.22 minutos"
-```
