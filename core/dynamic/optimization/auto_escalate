@@ -1,6 +1,4 @@
 ## Esquema de Autoescalado Inteligente
-
-```mermaid
 graph TD
     A[Monitor Continuum] --> B{¿Estable?}
     B -->|Sí| C[Análisis Carga]
