@@ -1,7 +1,3 @@
-
-### 3. Generación de Nueva Dimensiones 
-# Ejemplo de nueva dimensión basada en plantilla
-new_dimension:
   <<: *base_dim
   id: "gamma"
   description: "Dimensión de customer experience"
