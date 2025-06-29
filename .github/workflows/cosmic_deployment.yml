@@ -1,8 +1,4 @@
-  # ========================
-  # FASE 3: DESPLIEGUE INTERGALÁCTICO
-  # ========================
-  cosmic_deployment:
-    name: "Despliegue en Dimensión Prime"
+   name: "cosmic_deployment"
     needs: quantum_build
     runs-on: reality-forge
     environment: cosmic-production
