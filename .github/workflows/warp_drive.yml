@@ -1,9 +1,3 @@
-
-# =============================================
-# MECHAUTOMATION WARP-DRIVE CONFIGURATION v4.7
-# Sistema de Autoescalado Dimensional para Cargas Estelares
-# =============================================
-
 name: "Warp Drive Cosmic Autoscaling"
 description: "Sistema de gestión de recursos para tráfico intergaláctico"
 
