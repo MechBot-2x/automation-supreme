@@ -1,12 +1,8 @@
-  # ========================
-  # FASE 1: VERIFICACIÓN DEL CONTINUUM
-  # ========================
-  reality_check:
-    name: "Estabilización de Realidad"
-    runs-on: quantum-ubuntu-24.04
-    outputs:
-      stable_dimensions: ${{ steps.dimension-scanner.outputs.dimensions }}
-      space_time_status: ${{ steps.reality-probe.outputs.stability }}
+ name: "vreality_check"
+ runs-on: quantum-ubuntu-24.04
+ outputs:
+ stable_dimensions: ${{ steps.dimension-scanner.outputs.dimensions }}
+ space_time_status: ${{ steps.reality-probe.outputs.stability }}
     
     steps:
       - name: "Iniciar Bloqueo Cuántico"
