@@ -1,4 +1,3 @@
-Reglas de conexión interdimensional
 interdimensional_rules:
   max_connections: 12
   default_ttl: "1h"
