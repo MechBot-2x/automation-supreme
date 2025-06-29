@@ -130,6 +130,9 @@ jobs:
     needs: build_matrix
     runs-on: reality-forge
     environment: cosmic-production
+    permissions:
+      contents: read
+      secrets: read
     
     steps:
       - name: "Descargar Artefactos"
