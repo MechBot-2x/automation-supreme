@@ -1,10 +1,10 @@
-name: Reality Sync
+name: reality_sync
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  reality_sync:
+    reality_sync:
     name: "Sincronización de Realidades"
     needs: deploy_shards
     runs-on: nebula-sync-node
