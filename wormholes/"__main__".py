@@ -1,7 +1,3 @@
-# =============================================
-# EJECUCIÓN PRINCIPAL DEL SISTEMA
-# =============================================
-
 if __name__ == "__main__":
     # Configuración del servidor
     folder = APIFolder(
