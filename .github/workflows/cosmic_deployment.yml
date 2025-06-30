@@ -1,10 +1,10 @@
-   name: "cosmic_deployment"
-    needs: quantum_build
-    runs-on: reality-forge
-    environment: cosmic-production
-    concurrency: quantum-deployment
+name: "cosmic_deployment"
+needs: quantum_build
+runs-on: reality-forge
+environment: cosmic-production
+concurrency: quantum-deployment
 
-    steps:
+steps:
       - name: "Descargar Realidades"
         uses: actions/download-artifact@v3
         with:
@@ -32,8 +32,9 @@
           status: ${{ job.status }}
           channel: '#cosmic-deployments'
           message: 'Despliegue completado en ${{ env.PRIMARY_DIMENSION }}
-          - name: "Registrar en el Libro de Realidad"
-        run: |
+          
+      - name: "Registrar en el Libro de Realidad"
+         run: |
           python logs/reality_logger.py \
             --event deployment_failure \
             --run-id ${{ github.run_id }} \
