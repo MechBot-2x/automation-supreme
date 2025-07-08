@@ -1,4 +1,8 @@
-  name: "emergency_protocol"
+  # ========================
+  # FASE 4: PROTOCOLO DE CONTENCIÓN
+  # ========================
+  emergency_protocol:
+    name: "Respuesta a Anomalías"
     if: ${{ failure() }}
     needs: [reality_check, quantum_build]
     runs-on: omega-platform
