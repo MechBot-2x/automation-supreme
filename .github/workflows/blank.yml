@@ -1,26 +1,23 @@
-name: CI
-
-    on:
-    push:
-  branches: [ "andromeda" ]
+name: CI   
+        
+on:
+ push:
+ branches: [ "andromeda" ]
  pull_request:
-       branches: [ "andromeda" ]
+    branches: [ "andromeda" ]
 workflow_dispatch:
-  
-    jobs:
-   permissions:
-    contents: read
-pull-requests: write
-         build:
-     runs-on: ubuntu-latest
-      
-  steps:
-   - uses: actions/checkout@v4
-
-   - name: Run a one-line script
-       run: echo Hello, world!
-
-   - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+jobs:
+permissions:
+      contents: read
+      pull-requests: write
+      build:
+      runs-on: ubuntu-latest
+        
+         steps:
+        - uses: actions/checkout@v4
+        - name: Run a one-line script
+        run: echo Hello, world!
+        - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
