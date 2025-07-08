@@ -1,6 +1,5 @@
 # SEGURIDAD.md - Política de Seguridad Intergaláctica
 
-```markdown
 # MECHAUTOMATION SECURITY POLICY v5.4
 
 ## VERSIONES COMPATIBLES CON SEGURIDAD
