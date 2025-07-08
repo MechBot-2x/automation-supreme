@@ -1,16 +1,3 @@
-      ,,,
-      return WormholeConnection(self, target_singularity)
-    
-    def backup_singularity(self, backup_path: str):
-        """Crea respaldo comprimido de la singularidad"""
-        backup_file = Path(backup_path) / f"singularity_bkp_{int(time.time())}.sq"
-        with self.Session() as session:
-            stmt = sa.select(self.data_table)
-            result = session.execute(stmt).fetchall()
-            
-        quantum_backup = {
-            'metadata': {
-                'version': '4.3',
                 'compression': self.compression,
                 'quantum': self.quantum,
                 'created': datetime.utcnow().isoformat()
