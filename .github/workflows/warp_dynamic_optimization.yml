@@ -1,10 +1,14 @@
-name: "dynamic_optimization"
-needs: reality_adjustment
-runs-on: quantum-optimizer-node
-timeout-minutes: 15
+  # ====================
+  # FASE 3: OPTIMIZACIÓN DINÁMICA
+  # ====================
+  dynamic_optimization:
+    name: "Afinamiento Cuántico"
+    needs: reality_adjustment
+    runs-on: quantum-optimizer-node
+    timeout-minutes: 15
     
     steps:
-    - name: "Cargar Perfil Dimensional"
+      - name: "Cargar Perfil Dimensional"
         uses: actions/download-artifact@v3
         with:
           name: quantum-profile
