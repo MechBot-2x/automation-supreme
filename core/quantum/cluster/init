@@ -1,0 +1,40 @@
+  # =================================
+  # FASE 1: PREPARACIÓN DEL NEBULA-CLUSTER
+  # =================================
+  quantum_cluster_init:
+    name: "Inicialización del Cluster Nebula"
+    runs-on: [nebula-control-node]
+    environment: nebula-production
+    outputs:
+      cluster_id: ${{ steps.cluster-gen.outputs.cluster_hash }}
+      reality_shards: ${{ steps.shard-detection.outputs.shard_count }}
+
+    steps:
+      - name: "Autenticación Cuántica"
+        uses: mechmind-actions/quantum-auth@v3
+        with:
+          identity-token: ${{ secrets.NEBULA_QUANTUM_KEY }}
+          tunnel-url: ${{ env.QUANTUM_TUNNEL }}
+
+      - name: "Generación de Cluster"
+        id: cluster-gen
+        run: |
+          CLUSTER_HASH=$(openssl rand -hex 12 | quantum-encode --format=nebula)
+          echo "::set-output name=cluster_hash::$CLUSTER_HASH"
+          echo "Cluster ID generado: $CLUSTER_HASH"
+
+      - name: "Detección de Fragmentos de Realidad"
+        id: shard-detection
+        uses: mechmind-actions/reality-scan@v2
+        with:
+          scan-depth: 7
+          entropy-threshold: 0.85
+        env:
+          QUANTUM_NOISE_REDUCTION: "true"
+
+      - name: "Configuración de Hipervisor"
+        run: |
+          python nebula/hypervisor.py configure \
+            --cluster-id=${{ steps.cluster-gen.outputs.cluster_hash }} \
+            --shards=${{ steps.shard-detection.outputs.shard_count }} \
+            --mode=${{ env.DEPLOYMENT_MODE }}
