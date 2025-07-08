@@ -1,7 +1,8 @@
+# API_FOLD.PY - Sistema de Doblamiento Espacio-Temporal para APIs
+
+```python
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-,,,
-
 # =============================================
 # MECHAUTOMATION API FOLD ENGINE v5.2.1
 # Sistema de teletransportación HTTP multidimensional
