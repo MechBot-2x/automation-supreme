@@ -2,9 +2,9 @@ name: CI
         
 on:
  push:
- branches: [ "andromeda" ]
+ branches: [ "master" ]
  pull_request:
-    branches: [ "andromeda" ]
+    branches: [ "master" ]
 workflow_dispatch:
 jobs:
 permissions:
