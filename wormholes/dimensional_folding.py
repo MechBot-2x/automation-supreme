@@ -15,10 +15,3 @@ if __name__ == "__main__":
     
     # Iniciar servidor
     folder.run_server(port=8080)
-```
-
-## ESTRUCTURA DEL SISTEMA
-
-```
-wormholes/
-├── api_fold.py               #
