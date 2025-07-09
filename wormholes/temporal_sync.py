@@ -1,5 +1,3 @@
-## MATRIZ DE DOBLADO
-
 | Nivel | Compresión | Latencia | Seguridad |
 |-------|------------|----------|-----------|
 | 1     | 0.9        | 50ms     | Standard  |
