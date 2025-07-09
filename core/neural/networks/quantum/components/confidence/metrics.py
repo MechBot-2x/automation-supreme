@@ -1,4 +1,3 @@
-
 graph TD
     A[Evento Cósmico] --> B{Preprocesamiento}
     B --> C[Extracción Cuántica]
