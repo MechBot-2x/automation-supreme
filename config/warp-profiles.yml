@@ -1,0 +1,27 @@
+warp_profiles:
+  standard:
+    dimensions: 4
+    core_allocation: "balanced"
+    energy_profile: "medium"
+    stability_parameters:
+      damping: 0.65
+      resonance: 1.2
+  
+  high_load:
+    dimensions: 8
+    core_allocation: "performance"
+    energy_profile: "high"
+    stability_parameters:
+      damping: 0.75
+      resonance: 1.0
+  
+  extreme:
+    dimensions: 12
+    core_allocation: "max"
+    energy_profile: "extreme"
+    stability_parameters:
+      damping: 0.85
+      resonance: 0.8
+    safety_overrides:
+      max_duration: "30m"
+      auto_rollback: true
