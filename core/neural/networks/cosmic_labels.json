@@ -1,0 +1,9 @@
+## MATRIZ DE CLASIFICACIÓN
+
+| Categoría Evento       | Precisión | Recall | F1-Score |
+|------------------------|-----------|--------|----------|
+| Agujero Negro          | 99.2%     | 98.7%  | 98.9%    |
+| Supernova              | 97.8%     | 98.2%  | 98.0%    |
+| Púlsar                 | 96.5%     | 95.9%  | 96.2%    |
+| Radiación Cósmica      | 95.1%     | 96.3%  | 95.7%    |
+| Anomalía Temporal      | 99.9%     | 99.8%  | 99.8%    |
