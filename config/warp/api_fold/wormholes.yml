@@ -1,0 +1,17 @@
+## MATRIZ DE DOBLADO
+
+| Nivel | Compresión | Latencia | Seguridad |
+|-------|------------|----------|-----------|
+| 1     | 0.9        | 50ms     | Standard  |
+| 3     | 0.7        | 120ms    | High      |
+| 5     | 0.5        | 300ms    | Quantum   |
+| 7     | 0.3        | 700ms    | Ultra     |
+
+## ESPECIFICACIONES TÉCNICAS
+
+| Parámetro               | Valor Base  | Rango Operativo |
+|-------------------------|-------------|-----------------|
+| Teletransportes/sec     | 1,200       | 500-5,000       |
+| Compresión Máxima       | 10:1        | 5:1 a 20:1      |
+| Tolerancia a Fallos     | 99.98%      | 99.9-99.999%    |
+| Qubits por Conexión     | 12          | 8-24            |
