@@ -1,0 +1,40 @@
+name: "CodeQL Advanced Fixed"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '35 9 * * 2'
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
+    permissions:
+      security-events: write
+      packages: read
+      actions: read
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - language: actions
+        - language: python
+    steps:
+    - name: Checkout repository (full history)
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Clona todo el historial para resolver problemas de diff
+
+    - name: Initialize CodeQL (custom config)
+      uses: github/codeql-action/init@v3
+      with:
+        languages: ${{ matrix.language }}
+        config-file: ./.github/codeql/custom-config.yml  # Config personalizada
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
