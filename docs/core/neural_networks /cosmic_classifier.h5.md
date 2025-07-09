@@ -1,5 +1,6 @@
+```python
 # COSMIC_CLASSIFIER.H5 - Modelo de Clasificación de Eventos Cósmicos
-````python
+
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import (Input, Dense, Conv2D, 
                                    MultiHeadAttention, 
