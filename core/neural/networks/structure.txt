@@ -1,0 +1,10 @@
+## ESTRUCTURA DEL SISTEMA
+
+```
+core/neural_networks/
+├── cosmic_classifier.h5      # Modelo pre-entrenado
+├── cosmic_labels.json        # Categorías de eventos
+└── quantum_components/      # Componentes cuánticos
+    ├── attention_ops.py     # Operadores de atención
+    └── confidence_metrics.py # Métricas cuánticas
+```
