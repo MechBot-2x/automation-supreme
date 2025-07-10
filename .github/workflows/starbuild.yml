@@ -1,6 +1,12 @@
+# =============================================
+# MECHAUTOMATION STARBUILD CONFIGURATION v3.2
+# Construcción CI/CD para Sistemas Autónomos
+# =============================================
+
 name: "Starbuild Matrix Workflow"
 
 on:
+  # Activadores multidimensionales
   push:
     branches: [ "andromeda", "milky-way" ]
     paths:
@@ -130,9 +136,6 @@ jobs:
     needs: build_matrix
     runs-on: reality-forge
     environment: cosmic-production
-    permissions:
-      contents: read
-      secrets: read
     
     steps:
       - name: "Descargar Artefactos"
