@@ -1,0 +1,3 @@
+- **QSEC-9001**: Cumplimiento de Seguridad Cuántica
+- **TIER-IV Cosmic**: Nivel máximo de protección
+- **Quantum Resistance Certified**: Resistencia a ataques post-cuánticos
