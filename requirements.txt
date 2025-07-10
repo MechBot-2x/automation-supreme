@@ -31,7 +31,7 @@ entropy-analyzer==1.5.2        # Medición de fluctuaciones cuánticas
 anomaly-detector==3.0.1        # Identificación de distorsiones
 
 # DEPENDENCIAS OPCIONALES
-#[dev]
+[dev]
 quantum-simulator==4.2.0       # Entorno de pruebas dimensionales
 reality-debugger==1.3.5        # Diagnóstico de anomalías
 test-dimensions==2.0.0         # Paquete de pruebas multiversales
