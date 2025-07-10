@@ -1,0 +1,6 @@
+| Parámetro               | Valor Base  | Rango Operativo |
+|-------------------------|-------------|-----------------|
+| Teletransportes/sec     | 1,200       | 500-5,000       |
+| Compresión Máxima       | 10:1        | 5:1 a 20:1      |
+| Tolerancia a Fallos     | 99.98%      | 99.9-99.999%    |
+| Qubits por Conexión     | 12          | 8-24            |

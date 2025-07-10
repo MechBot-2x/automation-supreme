@@ -1,4 +1,5 @@
 # COSMIC_CLASSIFIER.H5 - Modelo de Clasificación de Eventos Cósmicos
+
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import (Input, Dense, Conv2D, 
                                    MultiHeadAttention, 
@@ -196,78 +197,3 @@ def load_cosmic_model(path):
     
     classifier.model = model
     return classifier
-```
-
-## ESTRUCTURA DEL SISTEMA
-
-```
-core/neural_networks/
-├── cosmic_classifier.h5      # Modelo pre-entrenado
-├── cosmic_labels.json        # Categorías de eventos
-└── quantum_components/      # Componentes cuánticos
-    ├── attention_ops.py     # Operadores de atención
-    └── confidence_metrics.py # Métricas cuánticas
-```
-
-## PROTOCOLOS DE USO
-
-### 1. Inicialización del Clasificador
-```python
-# Configuración para eventos de alta energía
-classifier = CosmicClassifier(
-    input_shape=(512, 512, 4),  # Formato de entrada
-    num_classes=24,             # Tipos de eventos cósmicos
-    quantum_bits=12             # Mayor precisión cuántica
-)
-```
-
-### 2. Clasificación de Eventos
-```python
-# Carga de evento cósmico (formato: HWC)
-event_data = np.load('cosmic_event.npy')  
-
-# Predicción de categoría
-class_id, confidence = classifier.predict_event(event_data)
-print(f"Evento clasificado como {class_id} con confianza {confidence:.2f}")
-```
-
-### 3. Explicación de Predicciones
-```python
-# Mapa de atención cuántica
-attention_map = classifier.explain_prediction(event_data)
-plt.imshow(attention_map[0, :, :, 0])
-plt.title('Regiones de interés cuántico')
-```
-
-## MATRIZ DE CLASIFICACIÓN
-
-| Categoría Evento       | Precisión | Recall | F1-Score |
-|------------------------|-----------|--------|----------|
-| Agujero Negro          | 99.2%     | 98.7%  | 98.9%    |
-| Supernova              | 97.8%     | 98.2%  | 98.0%    |
-| Púlsar                 | 96.5%     | 95.9%  | 96.2%    |
-| Radiación Cósmica      | 95.1%     | 96.3%  | 95.7%    |
-| Anomalía Temporal      | 99.9%     | 99.8%  | 99.8%    |
-
-## REQUISITOS DEL SISTEMA
-
-| Componente           | Especificación Mínima | Recomendado  |
-|----------------------|-----------------------|--------------|
-| Procesador           | 8 núcleos            | 16+ núcleos  |
-| Memoria              | 32GB                 | 64GB+        |
-| Acelerador           | NVIDIA RTX 3090      | Quantum QPU  |
-| Almacenamiento       | 1TB SSD              | 2TB NVMe     |
-| Sistema Operativo    | Linux 5.15+          | Q-OS 4.2     |
-
-## FLUJO DE PROCESAMIENTO
-
-```mermaid
-graph TD
-    A[Evento Cósmico] --> B{Preprocesamiento}
-    B --> C[Extracción Cuántica]
-    C --> D[Atención Multidimensional]
-    D --> E[Clasificación]
-    E --> F[Explicación]
-```
-
-Este modelo está operativo en el 100% de los nodos de MechBot 2.0, procesando más de 1.2 millones de eventos cósmicos por ciclo con una precisión promedio del 98.7% en condiciones de alta energía.
