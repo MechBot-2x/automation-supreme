@@ -32,10 +32,10 @@
 ```
 
 ### **🪐 Archivos Clave del Universo**  
-1. **`.github/warp-drive.yml`** - Autoescalado basado en energía cósmica (tráfico)  
+1. **`.github/workflows/warp-drive.yml`** - Autoescalado basado en energía cósmica (tráfico)  
 2. **`core/quantum_engine.py`** - Núcleo de procesamiento paralelo  
 3. **`wormholes/api_fold.py`** - Teletransportación de peticiones HTTP  
-4. **`config/dark-matter.env`** - API Keys de servicios intergalácticos  
+4. **`config/dark-matter.env`** - API Keys de servicios intergalácticos
 
 ---
 
@@ -58,7 +58,7 @@ python core/quantum_engine.py --init --fuel=100%
 | Archivo de Configuración       | Propósito                          |  
 |--------------------------------|-----------------------------------|  
 | `config/multiverse.yaml`       | Regula realidades paralelas       |  
-| `.github/starbuild.yml`        | Construcción de constelaciones    |  
+| `.github/workflows/starbuild.yml`        | Construcción de constelaciones    |  
 | `core/neural_networks/*.pt`    | Inteligencias artificiales        |  
 ```
 
