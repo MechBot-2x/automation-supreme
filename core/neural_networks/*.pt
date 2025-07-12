@@ -1,0 +1,5 @@
+| Archivo de Configuración          | Propósito                         |  
+|-----------------------------------|-----------------------------------|  
+| `config/multiverse.yaml`          | Regula realidades paralelas       |  
+| `.github/workflows/starbuild.yml` | Construcción de constelaciones    |  
+| `core/neural_networks/*.pt`       | Inteligencias artificiales        |  
