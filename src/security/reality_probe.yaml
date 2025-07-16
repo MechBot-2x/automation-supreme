@@ -1,0 +1,35 @@
+# ========================
+  # FASE 1: MONITOREO DEL CONTINUUM
+  # ========================
+  reality_probe:
+    name: "Sonda de Realidad"
+    runs-on: quantum-probe-array
+    outputs:
+      space_metrics: ${{ steps.quantum-scan.outputs.metrics }}
+      anomaly_report: ${{ steps.anomaly-detect.outputs.report }}
+    
+    steps:
+      - name: "Iniciar Sondas Cuánticas"
+        uses: mechmind-actions/quantum-probe@v3.2
+        with:
+          scan-depth: deep
+          dimensions: all
+          precision: 0.001
+
+      - name: "Escaneo Dimensional"
+        id: quantum-scan
+        run: |
+          echo "Iniciando escaneo de flujo espacio-temporal..."
+          METRICS=$(python probes/reality_scanner.py \
+            --mode=full \
+            --output=json \
+            --precision=0.001)
+          echo "::set-output name=metrics::$METRICS"
+
+      - name: "Detección de Anomalías"
+        id: anomaly-detect
+        if: always()
+        uses: mechmind-actions/anomaly-detector@v2.4
+        with:
+          metrics-json: ${{ steps.quantum-scan.outputs.metrics }}
+          sensitivity: 0.93
