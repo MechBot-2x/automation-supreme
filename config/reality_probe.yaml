@@ -1,0 +1,35 @@
+# ========================
+  # FASE 2: CÁLCULO DE DISTORSIÓN
+  # ========================
+  warp_calculation:
+    name: "Calculadora de Curvatura"
+    needs: reality_probe
+    runs-on: tesseract-calculator
+    outputs:
+      warp_parameters: ${{ steps.warp-formula.outputs.parameters }}
+      recommended_dimensions: ${{ steps.dimension-calc.outputs.count }}
+    
+    steps:
+      - name: "Analizar Métricas"
+        id: metrics-analysis
+        run: |
+          echo "${{ needs.reality_probe.outputs.space_metrics }}" > metrics.json
+          python analytics/warp_analyzer.py \
+            --input metrics.json \
+            --output parameters.csv
+
+      - name: "Aplicar Fórmula de Alcubierre"
+        id: warp-formula
+        uses: mechmind-actions/alcubierre-calculator@v1.8
+        with:
+          base-factor: ${{ env.BASE_WARP_FACTOR }}
+          entropy-data: ${{ needs.reality_probe.outputs.space_metrics }}
+          buffer: ${{ env.SINGULARITY_BUFFER }}
+
+      - name: "Calcular Dimensiones Requeridas"
+        id: dimension-calc
+        run: |
+          DIMENSIONS=$(python analytics/dimension_calculator.py \
+            --warp ${{ steps.warp-formula.outputs.parameters }} \
+            --max ${{ env.MAX_DIMENSIONS }})
+          echo "::set-output name=count::$DIMENSIONS"
