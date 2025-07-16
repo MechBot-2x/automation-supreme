@@ -25,19 +25,19 @@ class APIFolder:
                  quantum_entanglement=True,
                  temporal_compression=0.7):
         .      if __name__ == "__main__":
-            # Configuración del servidor
-            folder = APIFolder(
-                max_folds=5,
-                quantum_entanglement=True,
-                temporal_compression=0.7
-            )
-    
-    # Rutas personalizadas
-    folder.add_route('/health', lambda r: web.json_response({"status": "quantum_ok"}))
-    
-    # Iniciar servidor
-    folder.run_server(port=8080)
-        
+            # Configuración avanzada
+                   folder = APIFolder(
+                  max_folds=7,               # Máximo de dobleces
+        quantum_entanglement=True, # Entrelazamiento cuántico
+         temporal_compression=0.5   # Mayor compresión
+)
+
+            # Agregar rutas personalizadas
+          folder.add_route('/custom', handle_custom_request)
+
+            # Iniciar servidor
+            folder.run_server(port=8080)
+                     
         Args:
             max_folds: Máximo de dobleces espacio-temporales por petición
             quantum_entanglement: Activar entrelazamiento cuántico
