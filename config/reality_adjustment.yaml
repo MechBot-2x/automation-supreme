@@ -1,0 +1,35 @@
+# ========================
+  # FASE 3: AJUSTE DE REALIDAD
+  # ========================
+  reality_adjustment:
+    name: "Ajuste de Continuum"
+    needs: [reality_probe, warp_calculation]
+    runs-on: reality-forge
+    environment: cosmic-operations
+    
+    steps:
+      - name: "Verificar Umbral de Estabilidad"
+        id: stability-check
+        run: |
+          STABILITY=$(jq -r '.stability' <<< '${{ needs.reality_probe.outputs.space_metrics }}')
+          if (( $(echo "$STABILITY < ${{ env.STABILIZATION_THRESHOLD }}" | bc -l) )); then
+            echo "::error::Inestabilidad crítica detectada ($STABILITY)"
+            exit 1
+          fi
+
+      - name: "Aplicar Ajustes Cuánticos"
+        if: success()
+        uses: mechmind-actions/reality-adjuster@v4.1
+        with:
+          warp-parameters: ${{ needs.warp_calculation.outputs.warp_parameters }}
+          target-dimensions: ${{ needs.warp_calculation.outputs.recommended_dimensions }}
+          stabilization-mode: auto
+        env:
+          QUANTUM_KEY: ${{ secrets.COSMIC_SCALING_KEY }}
+
+      - name: "Desplegar Amortiguadores de Entropía"
+        if: ${{ needs.reality_probe.outputs.anomaly_report != 'clean' }}
+        uses: mechmind-actions/entropy-dampeners@v2.2
+        with:
+          anomaly-level: ${{ needs.reality_probe.outputs.anomaly_report }}
+          auto-calibrate: true
