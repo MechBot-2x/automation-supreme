@@ -1,29 +1,29 @@
 # ====================
-  # FASE 4: MONITOREO CONTINUO
-  # ====================
-  reality_stabilization:
-    name: "Estabilización Post-Ajuste"
-    needs: dynamic_optimization
-    runs-on: quantum-stabilizer-node
+# FASE 4: MONITOREO CONTINUO
+# ====================
+reality_stabilization:
+  name: "Estabilización Post-Ajuste"
+  needs: dynamic_optimization
+  runs-on: quantum-stabilizer-node
     
-    steps:
-      - name: "Iniciar Bucles de Retroalimentación"
-        uses: mechmind-actions/feedback-loops@v2.1
-        with:
-          loops: 3
-          interval: "2m"
+  steps:
+    - name: "Iniciar Bucles de Retroalimentación"
+      uses: mechmind-actions/feedback-loops@v2.1
+      with:
+        loops: 3
+        interval: "2m"
         
-      - name: "Monitor de Integridad Dimensional"
-        uses: mechmind-actions/reality-monitor@v4.0
-        with:
-          alert_threshold: 0.85
-          sample_rate: "10s"
-          duration: "5m"
+    - name: "Monitor de Integridad Dimensional"
+      uses: mechmind-actions/reality-monitor@v4.0
+      with:
+        alert_threshold: 0.85
+        sample_rate: "10s"
+        duration: "5m"
         
-      - name: "Reporte de Estabilidad"
-        if: always()
-        uses: actions/slack@v2
-        with:
-          status: ${{ job.status }}
-          channel: '#warp-core-status'
-          message: "Warp Drive adjustment completed at $(date)"
+    - name: "Reporte de Estabilidad"
+      if: always()
+      uses: actions/slack@v2
+      with:
+        status: ${{ job.status }}
+        channel: '#warp-core-status'
+        message: "Warp Drive adjustment completed at $(date)"
