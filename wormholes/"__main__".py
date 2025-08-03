@@ -1,13 +1,24 @@
+# =============================================
+# INTERFAZ DE OPERACIÓN
+# =============================================
+
 if __name__ == "__main__":
-    # Configuración del servidor
-    folder = APIFolder(
-        max_folds=5,
-        quantum_entanglement=True,
-        temporal_compression=0.7
+    # Ejemplo de uso básico
+    singularity = DataSingularity(
+        event_horizon="sqlite:///blackhole.db",
+        compression_level=0.95
     )
     
-    # Rutas personalizadas
-    folder.add_route('/health', lambda r: web.json_response({"status": "quantum_ok"}))
+    # Ingesta de datos
+    sample_data = {
+        "stellar_objects": ["quasar", "pulsar", "neutron_star"],
+        "coordinates": [{"x": 12.5, "y": 42.3, "z": 88.8}],
+        "energy_levels": [1e9, 1e12, 1e15]
+    }
     
-    # Iniciar servidor
-    folder.run_server(port=8080)
+    data_id = singularity.ingest_data(sample_data)
+    print(f"Datos absorbidos con ID: {data_id}")
+    
+    # Recuperación de datos
+    recovered = singularity.retrieve_data(data_id)
+    print("Datos recuperados:", recovered)
