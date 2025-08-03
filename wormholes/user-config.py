@@ -1,7 +1,5 @@
 ## PROTOCOLOS DE USO
-
 ### 1. Iniciar Servidor de Doblado
-```python
 # Configuración avanzada
 folder = APIFolder(
     max_folds=7,               # Máximo de dobleces
@@ -14,10 +12,8 @@ folder.add_route('/custom', handle_custom_request)
 
 # Iniciar servidor
 folder.run_server(port=8080)
-```
 
 ### 2. Cliente de Teletransportación
-```python
 client = APIFoldClient(
     endpoint="https://api-gateway:8080",
     max_folds=3
