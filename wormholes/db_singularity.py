@@ -1,4 +1,3 @@
-# DB_SINGULARITY.PY - Agujero Negro de Datos Interdimensional
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # =============================================
