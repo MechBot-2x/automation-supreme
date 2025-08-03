@@ -4,6 +4,8 @@
 
 if __name__ == "__main__":
     # Configuración avanzada
+folder.add_route('/custom', handle_custom_request)
+folder.run_server(port=8080)
 folder = APIFolder(
     max_folds=7,               # Máximo de dobleces
     quantum_entanglement=True, # Entrelazamiento cuántico
