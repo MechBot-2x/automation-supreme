@@ -42,7 +42,7 @@
 ### **🌠 Cómo Desplegar tu Propio Universo**  
 ```bash
 # Clonar el continuum espacio-temporal
-git clone https://github.com/mechmind-dwv/automation-supreme.git --branch=andromeda
+git clone https://github.com/MechBot-2x/automation-supreme.git --branch=andromeda
 
 # Iniciar el motor de curvatura (requiere antimateria)
 python core/quantum_engine.py --init --fuel=100% 
