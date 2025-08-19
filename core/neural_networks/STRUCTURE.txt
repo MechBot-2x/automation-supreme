@@ -1,6 +1,5 @@
 ## ESTRUCTURA DEL SISTEMA
-
-```
+```bash
 core/neural_networks/
 ├── cosmic_classifier.h5      # Modelo pre-entrenado
 ├── cosmic_labels.json        # Categorías de eventos
