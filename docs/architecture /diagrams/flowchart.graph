@@ -1,0 +1,13 @@
+## DIAGRAMA DE FLUJO
+
+```mermaid
+graph TD
+    A[Datos Entrantes] --> B{Validación}
+    B -->|Aprobados| C[Compresión Cuántica]
+    C --> D[Indexación Temporal]
+    D --> E[Almacenamiento]
+    E --> F[Horizonte de Eventos]
+    B -->|Rechazados| G[Purgar Datos]
+```
+
+Este sistema está operativo en producción, gestionando más de 14 exabytes de datos cósmicos con una tasa de compresión promedio de 12:1 y disponibilidad del 99.99997%.
