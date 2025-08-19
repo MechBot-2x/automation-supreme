@@ -16,7 +16,7 @@ reality-signer==2.4.0          # Firmas temporales irreversibles
 wormhole-protocol==5.2.1       # Comunicación interdimensional segura
 
 # MOTOR DE INFERENCIA NEURAL
-torch==2.2.1                   # Base para redes neuronales cuánticas
+torch ~> 2.7.1-rc1             # Base para redes neuronales cuánticas
 tensorflow==2.15.0             # Procesamiento de flujos temporales
 quantum-transformers==1.8.3    # Modelos de atención multidimensional
 
